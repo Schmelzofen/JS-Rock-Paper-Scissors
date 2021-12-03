@@ -15,7 +15,7 @@
     <main>
       <section class="rounds">
         <h1>how many rounds?</h1>
-        <div class="round-container">
+        <div class="round-container" id="round-container">
           <div>
             <input type="radio" name="runden" id="funf" />
             <label for="funf">5</label>
@@ -35,24 +35,40 @@
         </div>
       </section>
       <section class="statistic">
+        <p>You</p>
         <p id="player">0</p>
         <p>:</p>
         <p id="comp">0</p>
+        <p>Comp</p>
       </section>
       <section class="ergebnis">
         <h2 id="result"></h2>
       </section>
       <section class="auswahl">
         <div>
-          <i class="far fa-hand-rock fa-3x"></i>
+          <i
+            onclick="playGame(rock)"
+            id="rock"
+            class="far fa-hand-rock fa-3x"
+          ></i>
         </div>
         <div>
-          <i class="far fa-hand-paper fa-3x"></i>
+          <i
+            onclick="playGame(paper)"
+            id="paper"
+            class="far fa-hand-paper fa-3x"
+          ></i>
         </div>
         <div>
-          <i class="far fa-hand-scissors fa-3x"></i>
+          <i
+            onclick="playGame(scissors)"
+            id="scissors"
+            class="far fa-hand-scissors fa-3x"
+          ></i>
         </div>
       </section>
+      <h2>Make your move.</h2>
+      <a href="#">restart</a>
     </main>
     <script src="./assets/js/main.js"></script>
   </body>
