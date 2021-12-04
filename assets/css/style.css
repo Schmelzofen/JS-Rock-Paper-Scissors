@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Lean;
+    src: url(../font/Lean.otf);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -10,6 +15,7 @@ main{
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    font-family: Lean;
 }
 
 .rounds{
@@ -35,16 +41,47 @@ h1{
     text-align: center;
 }
 
+.ergebnis{
+    padding: 2% 0;
+}
+
 .statistic p{
     display: inline;
 }
 
 .auswahl{
     border: 1px solid black;
-    padding: 2% 8%;
+    padding: 2% 1%;
 }
 
 .auswahl div{
     display: inline;
     margin: 0 10px;
+}
+
+#roundShow{
+    display: flex;
+    justify-content: center;
+}
+
+#move{
+    margin: 5% 0 0 0;
+    padding: 0 0 5% 0;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+a:hover{
+    color: crimson;
+}
+
+i{
+    cursor:pointer;
+}
+
+i:hover{
+    transform: scale(1.1);
 }
