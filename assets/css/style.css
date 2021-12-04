@@ -7,6 +7,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Lean;
 }
 
 main{
@@ -14,7 +15,6 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: Lean;
 }
 
 main > h1 {
@@ -39,6 +39,7 @@ main > h1 {
     padding: 1% 10%;
     margin: 2% 0;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .ergebnis{
@@ -50,12 +51,12 @@ main > h1 {
 }
 
 .auswahl{
-    padding: 1% 1%;
+    padding: 2.5% 1%;
 }
 
 .auswahl div{
     display: inline;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 #roundShow{
@@ -75,6 +76,7 @@ main > h1 {
 a{
     text-decoration: none;
     font-size: 1.5rem;
+    display: inline-block;
 }
 
 a:hover{
@@ -87,4 +89,14 @@ i{
 
 i:hover{
     transform: scale(1.1);
+}
+
+footer ul{
+    padding: 5% 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li{
+    list-style: none;
 }
