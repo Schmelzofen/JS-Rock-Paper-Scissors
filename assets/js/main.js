@@ -14,6 +14,8 @@ let howMany = document.getElementById("howMany")
 let outputWin = document.getElementById("outputWin")
 let outputLose = document.getElementById("outputLose")
 let outputDraw = document.getElementById("outputDraw")
+// Statistik (Rundenverlauf)
+let stats = document.getElementById("stat-log")
 // Ergebnis Output
 let result = document.getElementById("result")
 
@@ -41,6 +43,7 @@ const enemyAuswahl = () => {
 
 // Win-Lose Funktion
 let playGame = (x) => {
+    let li = document.createElement("li")
     let gegner = enemyAuswahl() // neue Auswahl bei jedem Klick
     rock.value = "rock"
     paper.value = "paper"
@@ -200,4 +203,6 @@ let playGame = (x) => {
                     outputLose.innerHTML = " "
                 }
     }
+    li.textContent += `round ${count}: you: ${x.value}  enemy: ${enemy}`
+    stats.append(li)
 }
