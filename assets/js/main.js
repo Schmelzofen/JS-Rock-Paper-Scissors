@@ -42,7 +42,6 @@ const enemyAuswahl = () => {
 // Win-Lose Funktion
 let playGame = (x) => {
     let gegner = enemyAuswahl() // neue Auswahl bei jedem Klick
-    console.log(gegner)
     rock.value = "rock"
     paper.value = "paper"
     scissors.value = "scissors"
@@ -58,7 +57,6 @@ let playGame = (x) => {
             outputWin.innerHTML = " "
             outputLose.innerHTML = " "
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
-                console.log("win")
                 playerCount+=1
                 player.innerHTML = playerCount
                 result.innerHTML = "Win!"
@@ -66,7 +64,6 @@ let playGame = (x) => {
                 outputLose.innerHTML = " "
                 outputDraw.innerHTML = " "
             }        else if(x.value == "rock" && gegner == "paper" || x.value == "scissors" && gegner == "rock" || x.value == "paper" && gegner == "scissors" || x.value == "lizard" && gegner == "rock" || x.value == "lizard" && gegner == "scissors" || x.value == "spock" && gegner == "lizard" || x.value == "spock" && gegner == "paper" || x.value == "rock" && gegner == "spock" || x.value == "scissors" && gegner == "spock" || x.value == "paper" && gegner == "lizard"){
-                    console.log("lose")
                     enemyCount+=1
                     comp.innerHTML = enemyCount
                     result.innerHTML = "Try again!"
@@ -98,7 +95,6 @@ let playGame = (x) => {
             outputWin.innerHTML = " "
             outputLose.innerHTML = " "
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
-                console.log("win")
                 playerCount+=1
                 player.innerHTML = playerCount
                 result.innerHTML = "Win!"
@@ -106,7 +102,6 @@ let playGame = (x) => {
                 outputLose.innerHTML = " "
                 outputDraw.innerHTML = " "
             }        else if(x.value == "rock" && gegner == "paper" || x.value == "scissors" && gegner == "rock" || x.value == "paper" && gegner == "scissors" || x.value == "lizard" && gegner == "rock" || x.value == "lizard" && gegner == "scissors" || x.value == "spock" && gegner == "lizard" || x.value == "spock" && gegner == "paper" || x.value == "rock" && gegner == "spock" || x.value == "scissors" && gegner == "spock" || x.value == "paper" && gegner == "lizard"){
-                    console.log("lose")
                     enemyCount+=1
                     comp.innerHTML = enemyCount
                     result.innerHTML = "Try again!"
@@ -138,7 +133,6 @@ let playGame = (x) => {
             outputWin.innerHTML = " "
             outputLose.innerHTML = " "
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
-                console.log("win")
                 playerCount+=1
                 player.innerHTML = playerCount
                 result.innerHTML = "Win!"
@@ -146,7 +140,6 @@ let playGame = (x) => {
                 outputLose.innerHTML = " "
                 outputDraw.innerHTML = " "
             }        else if(x.value == "rock" && gegner == "paper" || x.value == "scissors" && gegner == "rock" || x.value == "paper" && gegner == "scissors" || x.value == "lizard" && gegner == "rock" || x.value == "lizard" && gegner == "scissors" || x.value == "spock" && gegner == "lizard" || x.value == "spock" && gegner == "paper" || x.value == "rock" && gegner == "spock" || x.value == "scissors" && gegner == "spock" || x.value == "paper" && gegner == "lizard"){
-                    console.log("lose")
                     enemyCount+=1
                     comp.innerHTML = enemyCount
                     result.innerHTML = "Try again!"
@@ -178,7 +171,6 @@ let playGame = (x) => {
             outputWin.innerHTML = " "
             outputLose.innerHTML = " "
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
-                console.log("win")
                 playerCount+=1
                 player.innerHTML = playerCount
                 result.innerHTML = "Win!"
@@ -186,7 +178,6 @@ let playGame = (x) => {
                 outputLose.innerHTML = " "
                 outputDraw.innerHTML = " "
             }        else if(x.value == "rock" && gegner == "paper" || x.value == "scissors" && gegner == "rock" || x.value == "paper" && gegner == "scissors" || x.value == "lizard" && gegner == "rock" || x.value == "lizard" && gegner == "scissors" || x.value == "spock" && gegner == "lizard" || x.value == "spock" && gegner == "paper" || x.value == "rock" && gegner == "spock" || x.value == "scissors" && gegner == "spock" || x.value == "paper" && gegner == "lizard"){
-                    console.log("lose")
                     enemyCount+=1
                     comp.innerHTML = enemyCount
                     result.innerHTML = "Try again!"
