@@ -46,8 +46,8 @@ let playGame = (x) => {
     lizard.value = "lizard"
     if(funf.checked == true){
         count+=1
-        roundShow.innerHTML = `${count}/5`
-        howMany.innerHTML = "round:"
+        howMany.innerHTML = `round:  ${count}/5`
+        rounds.innerHTML = ""
         if(x.value == "rock" && gegner == "rock" || x.value == "paper" && gegner == "paper" || x.value == "scissors" && gegner == "scissors" || x.value == "spock" && gegner == "spock" || x.value == "lizard" && gegner == "lizard"){
             result.innerHTML = "D-D-D-DRAW!"
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
@@ -70,8 +70,8 @@ let playGame = (x) => {
                 }
     }   else if(zehn.checked == true){
         count+=1
-        rounds.innerHTML = `${count}/10`
-        howMany.innerHTML = "round:"
+        howMany.innerHTML = `round:  ${count}/10`
+        rounds.innerHTML = ""
         if(x.value == "rock" && gegner == "rock" || x.value == "paper" && gegner == "paper" || x.value == "scissors" && gegner == "scissors" || x.value == "spock" && gegner == "spock" || x.value == "lizard" && gegner == "lizard"){
             result.innerHTML = "D-D-D-DRAW!"
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
@@ -94,8 +94,8 @@ let playGame = (x) => {
                 }
     }   else if(funfzehn.checked == true){
         count+=1
-        rounds.innerHTML = `${count}/15`
-        howMany.innerHTML = "round:"
+        howMany.innerHTML = `round:  ${count}/15`
+        rounds.innerHTML = ""
         if(x.value == "rock" && gegner == "rock" || x.value == "paper" && gegner == "paper" || x.value == "scissors" && gegner == "scissors" || x.value == "spock" && gegner == "spock" || x.value == "lizard" && gegner == "lizard"){
             result.innerHTML = "D-D-D-DRAW!"
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
@@ -118,8 +118,8 @@ let playGame = (x) => {
                 }
     }   else if(zwanzig.checked == true){
         count+=1
-        rounds.innerHTML = `${count}/20`
-        howMany.innerHTML = "round:"
+        howMany.innerHTML = `round:  ${count}/20`
+        rounds.innerHTML = ""
         if(x.value == "rock" && gegner == "rock" || x.value == "paper" && gegner == "paper" || x.value == "scissors" && gegner == "scissors" || x.value == "spock" && gegner == "spock" || x.value == "lizard" && gegner == "lizard"){
             result.innerHTML = "D-D-D-DRAW!"
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
