@@ -52,11 +52,11 @@ let playGame = (x) => {
     lizard.value = "lizard"
     if(funf.checked == true){
         count+=1
-        howMany.innerHTML = `round:  ${count}/5`
-        rounds.innerHTML = " "
-        if(x.value == "rock" && gegner == "rock" || x.value == "paper" && gegner == "paper" || x.value == "scissors" && gegner == "scissors" || x.value == "spock" && gegner == "spock" || x.value == "lizard" && gegner == "lizard"){
+        howMany.innerHTML = `round:  ${count}/15`
+        rounds.innerHTML = ""
+        if(x.value == gegner){
             result.innerHTML = "Draw!"
-            outputDraw.innerHTML = `You took ${x.value} and the enemy took ${gegner}`
+            outputDraw.innerHTML = `${x.value} against ${gegner}`
             outputWin.innerHTML = " "
             outputLose.innerHTML = " "
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
@@ -70,7 +70,7 @@ let playGame = (x) => {
                     enemyCount+=1
                     comp.innerHTML = enemyCount
                     result.innerHTML = "Try again!"
-                    outputLose.innerHTML = `${enemy} beats ${x.value}`
+                    outputLose.innerHTML = `oh no, the enemy took ${enemy}`
                     outputWin.innerHTML = " "
                     outputDraw.innerHTML = " "
                 }
@@ -90,11 +90,11 @@ let playGame = (x) => {
                 }
     }   else if(zehn.checked == true){
         count+=1
-        howMany.innerHTML = `round:  ${count}/10`
+        howMany.innerHTML = `round:  ${count}/15`
         rounds.innerHTML = ""
-        if(x.value == "rock" && gegner == "rock" || x.value == "paper" && gegner == "paper" || x.value == "scissors" && gegner == "scissors" || x.value == "spock" && gegner == "spock" || x.value == "lizard" && gegner == "lizard"){
+        if(x.value == gegner){
             result.innerHTML = "Draw!"
-            outputDraw.innerHTML = `You took ${x.value} and the enemy took ${gegner}`
+            outputDraw.innerHTML = `${x.value} against ${gegner}`
             outputWin.innerHTML = " "
             outputLose.innerHTML = " "
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
@@ -108,7 +108,7 @@ let playGame = (x) => {
                     enemyCount+=1
                     comp.innerHTML = enemyCount
                     result.innerHTML = "Try again!"
-                    outputLose.innerHTML = `${enemy} beats ${x.value}`
+                    outputLose.innerHTML = `oh no, the enemy took ${enemy}`
                     outputWin.innerHTML = " "
                     outputDraw.innerHTML = " "
                 }
@@ -130,9 +130,9 @@ let playGame = (x) => {
         count+=1
         howMany.innerHTML = `round:  ${count}/15`
         rounds.innerHTML = ""
-        if(x.value == "rock" && gegner == "rock" || x.value == "paper" && gegner == "paper" || x.value == "scissors" && gegner == "scissors" || x.value == "spock" && gegner == "spock" || x.value == "lizard" && gegner == "lizard"){
+        if(x.value == gegner){
             result.innerHTML = "Draw!"
-            outputDraw.innerHTML = `You took ${x.value} and the enemy took ${gegner}`
+            outputDraw.innerHTML = `${x.value} against ${gegner}`
             outputWin.innerHTML = " "
             outputLose.innerHTML = " "
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
@@ -146,7 +146,7 @@ let playGame = (x) => {
                     enemyCount+=1
                     comp.innerHTML = enemyCount
                     result.innerHTML = "Try again!"
-                    outputLose.innerHTML = `${enemy} beats ${x.value}`
+                    outputLose.innerHTML = `oh no, the enemy took ${enemy}`
                     outputWin.innerHTML = " "
                     outputDraw.innerHTML = " "
                 }
@@ -168,9 +168,9 @@ let playGame = (x) => {
         count+=1
         howMany.innerHTML = `round:  ${count}/20`
         rounds.innerHTML = ""
-        if(x.value == "rock" && gegner == "rock" || x.value == "paper" && gegner == "paper" || x.value == "scissors" && gegner == "scissors" || x.value == "spock" && gegner == "spock" || x.value == "lizard" && gegner == "lizard"){
+        if(x.value == gegner){
             result.innerHTML = "Draw!"
-            outputDraw.innerHTML = `You took ${x.value} and the enemy took ${gegner}`
+            outputDraw.innerHTML = `${x.value} against ${gegner}`
             outputWin.innerHTML = " "
             outputLose.innerHTML = " "
         }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
@@ -184,7 +184,7 @@ let playGame = (x) => {
                     enemyCount+=1
                     comp.innerHTML = enemyCount
                     result.innerHTML = "Try again!"
-                    outputLose.innerHTML = `${enemy} beats ${x.value}`
+                    outputLose.innerHTML = `oh no, the enemy took ${enemy}`
                     outputWin.innerHTML = " "
                     outputDraw.innerHTML = " "
                 }
