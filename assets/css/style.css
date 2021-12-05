@@ -21,6 +21,18 @@ body{
     font-size: 1.3rem;
 }
 
+#stat-log li:nth-of-type(1){
+    padding: 0 0 0 6.5vw;
+}
+
+#stat-log-enemy{
+    position: absolute;
+    padding: 17% 0 0 15%;
+    list-style-type: none;
+    font-size: 1.3rem;
+    color: crimson;
+}
+
 main{
     display: flex;
     align-items: center;

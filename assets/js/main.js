@@ -16,6 +16,7 @@ let outputLose = document.getElementById("outputLose")
 let outputDraw = document.getElementById("outputDraw")
 // Statistik (Rundenverlauf)
 let stats = document.getElementById("stat-log")
+let statsEnemy = document.getElementById("stat-log-enemy")
 // Ergebnis Output
 let result = document.getElementById("result")
 
@@ -44,6 +45,7 @@ const enemyAuswahl = () => {
 // Win-Lose Funktion
 let playGame = (x) => {
     let li = document.createElement("li")
+    let liEnemy = document.createElement("li")
     let gegner = enemyAuswahl() // neue Auswahl bei jedem Klick
     rock.value = "rock"
     paper.value = "paper"
@@ -52,7 +54,7 @@ let playGame = (x) => {
     lizard.value = "lizard"
     if(funf.checked == true){
         count+=1
-        howMany.innerHTML = `round:  ${count}/15`
+        howMany.innerHTML = `round:  ${count}/5`
         rounds.innerHTML = ""
         if(x.value == gegner){
             result.innerHTML = "Draw!"
@@ -90,7 +92,7 @@ let playGame = (x) => {
                 }
     }   else if(zehn.checked == true){
         count+=1
-        howMany.innerHTML = `round:  ${count}/15`
+        howMany.innerHTML = `round:  ${count}/10`
         rounds.innerHTML = ""
         if(x.value == gegner){
             result.innerHTML = "Draw!"
@@ -203,6 +205,8 @@ let playGame = (x) => {
                     outputLose.innerHTML = " "
                 }
     }
-    li.textContent += `round ${count}: you: ${x.value}  enemy: ${enemy}`
+    li.textContent += `round ${count}: ${x.value}`
+    liEnemy.textContent += `${gegner}`
     stats.append(li)
+    statsEnemy.append(liEnemy)
 }
