@@ -1,9 +1,6 @@
 // Radiobuttons
-let funf = document.getElementById("funf")
-let zehn = document.getElementById("zehn")
-let funfzehn = document.getElementById("funfzehn")
-let zwanzig = document.getElementById("zwanzig")
 let auswahl = document.getElementById("auswahl")
+let runden = document.getElementsByName("runden")
 // Punkte Output
 let rounds = document.getElementById("round-container")
 let player = document.getElementById("player")
@@ -42,20 +39,45 @@ const enemyAuswahl = () => {
     }
 }
 
+roundCounter = () => {
+    for(let i=0;i<runden.length;i++){
+        if(runden[i].checked){
+            console.log(runden[i].value)
+            return runden[i].value
+        }
+    }
+}
+
 // Win-Lose Funktion
 let playGame = (x) => {
+    count+=1
     let li = document.createElement("li")
     let liEnemy = document.createElement("li")
+    howMany.innerHTML = `round:  ${count}/${roundCounter()}`
+    roundShow.style.visibility = "hidden"
+    if(count == roundCounter()){
+        if(playerCount > enemyCount){
+            auswahl.innerHTML = "You've won, gratulations!"
+            outputDraw.innerHTML = " "
+            outputWin.innerHTML = " "
+            outputLose.innerHTML = " "
+            result.innerHTML = " "
+        } else if(playerCount < enemyCount){
+            auswahl.innerHTML = "You've lost, how 'bout a new round?"
+            outputDraw.innerHTML = " "
+            outputWin.innerHTML = " "
+            outputLose.innerHTML = " "
+            }   else{
+                    auswahl.innerHTML = "Draw, maybe try again?"
+            }
+    return null
+    }
     let gegner = enemyAuswahl() // neue Auswahl bei jedem Klick
     rock.value = "rock"
     paper.value = "paper"
     scissors.value = "scissors"
     spock.value = "spock"
     lizard.value = "lizard"
-    if(funf.checked == true){
-        count+=1
-        howMany.innerHTML = `round:  ${count}/5`
-        rounds.innerHTML = ""
         if(x.value == gegner){
             result.innerHTML = "Draw!"
             outputDraw.innerHTML = `${x.value} against ${gegner}`
@@ -68,7 +90,7 @@ let playGame = (x) => {
                 outputWin.innerHTML = `${x.value} beats ${enemy}`
                 outputLose.innerHTML = " "
                 outputDraw.innerHTML = " "
-            }        else if(x.value == "rock" && gegner == "paper" || x.value == "scissors" && gegner == "rock" || x.value == "paper" && gegner == "scissors" || x.value == "lizard" && gegner == "rock" || x.value == "lizard" && gegner == "scissors" || x.value == "spock" && gegner == "lizard" || x.value == "spock" && gegner == "paper" || x.value == "rock" && gegner == "spock" || x.value == "scissors" && gegner == "spock" || x.value == "paper" && gegner == "lizard"){
+            }        else{
                     enemyCount+=1
                     comp.innerHTML = enemyCount
                     result.innerHTML = "Try again!"
@@ -76,135 +98,6 @@ let playGame = (x) => {
                     outputWin.innerHTML = " "
                     outputDraw.innerHTML = " "
                 }
-                if(count == 5 && playerCount == enemyCount){
-                    auswahl.innerHTML = "Draw, maybe try again?"
-                }   else if(count == 5 && playerCount > enemyCount){
-                    auswahl.innerHTML = "You've won, gratulations!"
-                    outputDraw.innerHTML = " "
-                    outputWin.innerHTML = " "
-                    outputLose.innerHTML = " "
-                    result.innerHTML = " "
-                } else if(count == 5 && playerCount < enemyCount){
-                    auswahl.innerHTML = "You've lost, how 'bout a new round?"
-                    outputDraw.innerHTML = " "
-                    outputWin.innerHTML = " "
-                    outputLose.innerHTML = " "
-                }
-    }   else if(zehn.checked == true){
-        count+=1
-        howMany.innerHTML = `round:  ${count}/10`
-        rounds.innerHTML = ""
-        if(x.value == gegner){
-            result.innerHTML = "Draw!"
-            outputDraw.innerHTML = `${x.value} against ${gegner}`
-            outputWin.innerHTML = " "
-            outputLose.innerHTML = " "
-        }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
-                playerCount+=1
-                player.innerHTML = playerCount
-                result.innerHTML = "Win!"
-                outputWin.innerHTML = `${x.value} beats ${enemy}`
-                outputLose.innerHTML = " "
-                outputDraw.innerHTML = " "
-            }        else if(x.value == "rock" && gegner == "paper" || x.value == "scissors" && gegner == "rock" || x.value == "paper" && gegner == "scissors" || x.value == "lizard" && gegner == "rock" || x.value == "lizard" && gegner == "scissors" || x.value == "spock" && gegner == "lizard" || x.value == "spock" && gegner == "paper" || x.value == "rock" && gegner == "spock" || x.value == "scissors" && gegner == "spock" || x.value == "paper" && gegner == "lizard"){
-                    enemyCount+=1
-                    comp.innerHTML = enemyCount
-                    result.innerHTML = "Try again!"
-                    outputLose.innerHTML = `oh no, the enemy took ${enemy}`
-                    outputWin.innerHTML = " "
-                    outputDraw.innerHTML = " "
-                }
-                if(count == 10 && playerCount == enemyCount){
-                    auswahl.innerHTML = "Draw, maybe try again?"
-                }   else if(count == 10 && playerCount > enemyCount){
-                    auswahl.innerHTML = "You've won, gratulations!"
-                    outputDraw.innerHTML = " "
-                    outputWin.innerHTML = " "
-                    outputLose.innerHTML = " "
-                    result.innerHTML = " "
-                } else if(count == 10 && playerCount < enemyCount){
-                    auswahl.innerHTML = "You've lost, how 'bout a new round?"
-                    outputDraw.innerHTML = " "
-                    outputWin.innerHTML = " "
-                    outputLose.innerHTML = " "
-                }
-    }   else if(funfzehn.checked == true){
-        count+=1
-        howMany.innerHTML = `round:  ${count}/15`
-        rounds.innerHTML = ""
-        if(x.value == gegner){
-            result.innerHTML = "Draw!"
-            outputDraw.innerHTML = `${x.value} against ${gegner}`
-            outputWin.innerHTML = " "
-            outputLose.innerHTML = " "
-        }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
-                playerCount+=1
-                player.innerHTML = playerCount
-                result.innerHTML = "Win!"
-                outputWin.innerHTML = `${x.value} beats ${enemy}`
-                outputLose.innerHTML = " "
-                outputDraw.innerHTML = " "
-            }        else if(x.value == "rock" && gegner == "paper" || x.value == "scissors" && gegner == "rock" || x.value == "paper" && gegner == "scissors" || x.value == "lizard" && gegner == "rock" || x.value == "lizard" && gegner == "scissors" || x.value == "spock" && gegner == "lizard" || x.value == "spock" && gegner == "paper" || x.value == "rock" && gegner == "spock" || x.value == "scissors" && gegner == "spock" || x.value == "paper" && gegner == "lizard"){
-                    enemyCount+=1
-                    comp.innerHTML = enemyCount
-                    result.innerHTML = "Try again!"
-                    outputLose.innerHTML = `oh no, the enemy took ${enemy}`
-                    outputWin.innerHTML = " "
-                    outputDraw.innerHTML = " "
-                }
-                if(count == 15 && playerCount == enemyCount){
-                    auswahl.innerHTML = "Draw, maybe try again?"
-                }   else if(count == 15 && playerCount > enemyCount){
-                    auswahl.innerHTML = "You've won, gratulations!"
-                    outputDraw.innerHTML = " "
-                    outputWin.innerHTML = " "
-                    outputLose.innerHTML = " "
-                    result.innerHTML = " "
-                } else if(count == 15 && playerCount < enemyCount){
-                    auswahl.innerHTML = "You've lost, how 'bout a new round?"
-                    outputDraw.innerHTML = " "
-                    outputWin.innerHTML = " "
-                    outputLose.innerHTML = " "
-                }
-    }   else if(zwanzig.checked == true){
-        count+=1
-        howMany.innerHTML = `round:  ${count}/20`
-        rounds.innerHTML = ""
-        if(x.value == gegner){
-            result.innerHTML = "Draw!"
-            outputDraw.innerHTML = `${x.value} against ${gegner}`
-            outputWin.innerHTML = " "
-            outputLose.innerHTML = " "
-        }   else if(x.value == "rock" && gegner == "scissors" || x.value == "scissors" && gegner == "paper" || x.value == "paper" && gegner == "rock" || x.value == "spock" && gegner == "rock" || x.value == "spock" && gegner == "scissors" || x.value == "lizard" && gegner == "paper" || x.value == "lizard" && gegner == "spock" || x.value == "rock" && gegner == "lizard" || x.value == "scissors" && gegner == "lizard" || x.value == "paper" && gegner == "spock"){
-                playerCount+=1
-                player.innerHTML = playerCount
-                result.innerHTML = "Win!"
-                outputWin.innerHTML = `${x.value} beats ${enemy}`
-                outputLose.innerHTML = " "
-                outputDraw.innerHTML = " "
-            }        else if(x.value == "rock" && gegner == "paper" || x.value == "scissors" && gegner == "rock" || x.value == "paper" && gegner == "scissors" || x.value == "lizard" && gegner == "rock" || x.value == "lizard" && gegner == "scissors" || x.value == "spock" && gegner == "lizard" || x.value == "spock" && gegner == "paper" || x.value == "rock" && gegner == "spock" || x.value == "scissors" && gegner == "spock" || x.value == "paper" && gegner == "lizard"){
-                    enemyCount+=1
-                    comp.innerHTML = enemyCount
-                    result.innerHTML = "Try again!"
-                    outputLose.innerHTML = `oh no, the enemy took ${enemy}`
-                    outputWin.innerHTML = " "
-                    outputDraw.innerHTML = " "
-                }
-                if(count == 20 && playerCount == enemyCount){
-                    auswahl.innerHTML = "Draw, maybe try again?"
-                }   else if(count == 20 && playerCount > enemyCount){
-                    auswahl.innerHTML = "You've won, gratulations!"
-                    outputDraw.innerHTML = " "
-                    outputWin.innerHTML = " "
-                    outputLose.innerHTML = " "
-                    result.innerHTML = " "
-                } else if(count == 20 && playerCount < enemyCount){
-                    auswahl.innerHTML = "You've lost, how 'bout a new round?"
-                    outputDraw.innerHTML = " "
-                    outputWin.innerHTML = " "
-                    outputLose.innerHTML = " "
-                }
-    }
     li.textContent += `round ${count}: ${x.value}`
     liEnemy.textContent += `${gegner}`
     stats.append(li)

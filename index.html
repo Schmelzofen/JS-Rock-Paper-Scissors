@@ -23,27 +23,29 @@
     <main>
       <h1>Rock, Paper, Scissor, Lizard, Spock</h1>
       <section class="rounds">
-        <h1 id="howMany">how many rounds?</h1>
-        <div id="roundShow">
-          <div class="round-container" id="round-container">
-            <div>
-              <input type="radio" name="runden" id="funf" />
-              <label for="funf">5</label>
-            </div>
-            <div>
-              <input type="radio" name="runden" id="zehn" />
-              <label for="zehn">10</label>
-            </div>
-            <div>
-              <input type="radio" name="runden" id="funfzehn" />
-              <label for="funfzehn">15</label>
-            </div>
-            <div>
-              <input type="radio" name="runden" id="zwanzig" />
-              <label for="zwanzig">20</label>
+        <form action="" id="form" onsubmit="return false">
+          <h1 id="howMany">how many rounds?</h1>
+          <div id="roundShow">
+            <div class="round-container" id="round-container">
+              <div>
+                <input type="radio" name="runden" id="funf" value="5" checked />
+                <label for="funf">5</label>
+              </div>
+              <div>
+                <input type="radio" name="runden" id="zehn" value="10" />
+                <label for="zehn">10</label>
+              </div>
+              <div>
+                <input type="radio" name="runden" id="funfzehn" value="15" />
+                <label for="funfzehn">15</label>
+              </div>
+              <div>
+                <input type="radio" name="runden" id="zwanzig" value="20" />
+                <label for="zwanzig">20</label>
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </section>
       <section class="statistic">
         <p>You</p>
